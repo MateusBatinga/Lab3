@@ -9,14 +9,19 @@ package filmnow;
 public class FilmNow {
 
     private static final int TAMANHO = 100;
+    private static final int TAMANHO2 = 10;
 
-    private String[] filmes; //uma representacao simploria da lista de filmes
+    private String[] nomes; //uma representacao simploria da lista de filmes
+    private Filme[] filmes; //uma representacao simploria da lista de filmes
+    private Filme[] hotlist; //uma representacao simploria da lista de filmes
 
     /**
      * Cria o FilmNow.
      */
     public FilmNow() {
-        this.filmes = new String[TAMANHO];
+        this.nomes = new String[TAMANHO];
+        this.filmes = new Filme[TAMANHO];
+        this.hotlist = new Filme[TAMANHO2];
     }
 
     /**

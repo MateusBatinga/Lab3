@@ -1,0 +1,43 @@
+Main
+association FilmNow
+---
+---
++ main(args:String[]):void
++ exibeMenu():String
++ recebeOpcao(opcao:String):void
+
+---
+
+FilmNow
+composes Filme
+---
+- filmes:Filme[100]
+- hotList:Filme[10]
+---
++ FilmNow()
++ addFilme(posicao:int, nomefilme:String, anolancamento:String, ondever:String):String
++ listarFilme():String[]
++ detalharFilme(posicao:int):String
+- verificaFilme(posicao:int, nomefilme:String, anolancamento:String, ondever:String):String
++ adicionarHotlist(posicao:int):boolean
++ removerHotlist(posicao:int):boolean
++ exibirHotlist():String[]
+---
+
+Filme
+---
+- nome:String
+- anolanca:int
+- ondever:String[]
+- ehHot: boolean
+---
++ Filme(nomefilme:String, anolancamento:String, ondever:String)
++ getNome():String
++ getAno():int
++ getLocal():String
++ equals(o:Object):boolean
++ hashCode():int
++ setHot():boolean
++ isHot():boolean
++ toString():String
+---
